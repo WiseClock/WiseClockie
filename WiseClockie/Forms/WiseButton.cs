@@ -14,9 +14,9 @@ namespace WiseClockie.Forms
 
         private Color _borderColor = Color.FromArgb(255, 104, 139, 177);
         private Color _subTextColor = Color.Gray;
-        private Color _solidColorNormal = Color.LightBlue;
-        private Color _solidColorDown = Color.LightBlue;
-        private Color _solidColorHovered = Color.LightBlue;
+        private Color _solidColorNormal = Color.FromArgb(255, 227, 243, 255);
+        private Color _solidColorDown = Color.FromArgb(255, 145, 174, 199);
+        private Color _solidColorHovered = Color.FromArgb(255, 189, 196, 203);
         private Color _gradientNormal1 = Color.FromArgb(255, 227, 243, 255);
         private Color _gradientNormal2 = Color.FromArgb(255, 145, 174, 199);
         private Color _gradientDown1 = Color.FromArgb(255, 145, 174, 199);
@@ -29,7 +29,7 @@ namespace WiseClockie.Forms
         private string _subText = "";
 
         private int _borderSize = 1;
-        private bool _isGradient = false;
+        private bool _isGradient = true;
         private bool _drawBorder = true;
 
         // local use
@@ -38,6 +38,189 @@ namespace WiseClockie.Forms
         private bool _isAltDown = false;
 
         // properties
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "227, 243, 255")]
+        public Color SolidColorNormal
+        {
+            get
+            {
+                return _solidColorNormal;
+            }
+            set
+            {
+                _solidColorNormal = value;
+            }
+        }
+
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "189, 196, 203")]
+        public Color SolidColorHover
+        {
+            get
+            {
+                return _solidColorHovered;
+            }
+            set
+            {
+                _solidColorHovered = value;
+            }
+        }
+
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "145, 174, 199")]
+        public Color SolidColorDown
+        {
+            get
+            {
+                return _solidColorDown;
+            }
+            set
+            {
+                _solidColorDown = value;
+            }
+        }
+
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "227, 243, 255")]
+        public Color GradientColorNormal1
+        {
+            get
+            {
+                return _gradientNormal1;
+            }
+            set
+            {
+                _gradientNormal1 = value;
+            }
+        }
+
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "245, 249, 255")]
+        public Color GradientColorHover1
+        {
+            get
+            {
+                return _gradientHovered1;
+            }
+            set
+            {
+                _gradientHovered1 = value;
+            }
+        }
+
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "145, 174, 199")]
+        public Color GradientColorDown1
+        {
+            get
+            {
+                return _gradientDown1;
+            }
+            set
+            {
+                _gradientDown1 = value;
+            }
+        }
+
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "145, 174, 199")]
+        public Color GradientColorNormal2
+        {
+            get
+            {
+                return _gradientNormal2;
+            }
+            set
+            {
+                _gradientNormal2 = value;
+            }
+        }
+
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "189, 196, 203")]
+        public Color GradientColorHover2
+        {
+            get
+            {
+                return _gradientHovered2;
+            }
+            set
+            {
+                _gradientHovered2 = value;
+            }
+        }
+
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "227, 243, 255")]
+        public Color GradientColorDown2
+        {
+            get
+            {
+                return _gradientDown2;
+            }
+            set
+            {
+                _gradientDown2 = value;
+            }
+        }
+
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "104, 139, 177")]
+        public Color BorderColor
+        {
+            get
+            {
+                return _borderColor;
+            }
+            set
+            {
+                _borderColor = value;
+            }
+        }
+
+        [Description(""), Category("WiseClockie"), DefaultValue(typeof(Color), "Gray")]
+        public Color SubTextColor
+        {
+            get
+            {
+                return _subTextColor;
+            }
+            set
+            {
+                _subTextColor = value;
+            }
+        }
+
+        [Description("Is the button drawn in gradient colors."), Category("WiseClockie"), DefaultValue(true)]
+        public bool IsGradient
+        {
+            get
+            {
+                return _isGradient;
+            }
+            set
+            {
+                _isGradient = value;
+            }
+        }
+
+        [Description("Is the border drawn."), Category("WiseClockie"), DefaultValue(true)]
+        public bool DrawBorder
+        {
+            get
+            {
+                return _drawBorder;
+            }
+            set
+            {
+                _drawBorder = value;
+            }
+        }
+
+        [Description("The thickness of the button's border."), Category("WiseClockie"), DefaultValue(1)]
+        public int BorderSize
+        {
+            get
+            {
+                return _borderSize;
+            }
+            set
+            {
+                _borderSize = value;
+            }
+        }
+
+
         [Description("The border radius of the button."), DefaultValue(typeof(WiseCorner), "0, 0, 0, 0"), Category("WiseClockie")]
         public WiseCorner CornerRadius
         {
@@ -174,6 +357,8 @@ namespace WiseClockie.Forms
             Brush subTextBrush = new SolidBrush(this._subTextColor);
             Brush backBrush = new SolidBrush(this.BackColor);
             Brush solidBrushNormal = new SolidBrush(_solidColorNormal);
+            Brush solidBrushDown = new SolidBrush(_solidColorDown);
+            Brush solidBrushHovered = new SolidBrush(_solidColorHovered);
             LinearGradientBrush gradientBrushNormal = new LinearGradientBrush(new Point(0, 0), new Point(0, this.Height), _gradientNormal1, _gradientNormal2);
             LinearGradientBrush gradientBrushDown = new LinearGradientBrush(new Point(0, 0), new Point(0, this.Height), _gradientDown1, _gradientDown2);
             LinearGradientBrush gradientBrushHovered = new LinearGradientBrush(new Point(0, 0), new Point(0, this.Height), _gradientHovered1, _gradientHovered2);
@@ -188,19 +373,22 @@ namespace WiseClockie.Forms
 
             if (_isDown)
             {
-                e.Graphics.FillPath(gradientBrushDown, getRoundedRectPath(rect, CornerRadius));
+                e.Graphics.FillPath(_isGradient ? gradientBrushDown : solidBrushDown, getRoundedRectPath(rect, CornerRadius));
             }
             else if (_isHovered)
             {
-                e.Graphics.FillPath(gradientBrushHovered, getRoundedRectPath(rect, CornerRadius));
+                e.Graphics.FillPath(_isGradient ? gradientBrushHovered : solidBrushHovered, getRoundedRectPath(rect, CornerRadius));
             }
             else
             {
-                e.Graphics.FillPath(gradientBrushNormal, getRoundedRectPath(rect, CornerRadius));
+                e.Graphics.FillPath(_isGradient ? gradientBrushNormal : solidBrushNormal, getRoundedRectPath(rect, CornerRadius));
             }
 
-            e.Graphics.DrawPath(borderPenInner, getRoundedRectPath(rect, CornerRadius));
-            e.Graphics.DrawPath(borderPenOuter, getRoundedRectPath(rect, CornerRadius));
+            if (_drawBorder)
+            {
+                e.Graphics.DrawPath(borderPenInner, getRoundedRectPath(rect, CornerRadius));
+                e.Graphics.DrawPath(borderPenOuter, getRoundedRectPath(rect, CornerRadius));
+            }
 
             Regex regex = new Regex("([^&])&([^&])", RegexOptions.IgnorePatternWhitespace);
             string labelText = regex.Replace("!" + this.Text + "!", "${1}${2}").Trim('!');
