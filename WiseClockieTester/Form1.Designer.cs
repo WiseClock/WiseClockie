@@ -28,42 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Action", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("FPS", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("1");
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            WiseCorner wiseCorner1 = new WiseCorner();
+            WiseCorner wiseCorner2 = new WiseCorner();
+            WiseCorner wiseCorner3 = new WiseCorner();
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Action", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("FPS", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("1");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "21",
             "22"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("3");
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("4");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Node7");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Node10");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Node8", new System.Windows.Forms.TreeNode[] {
-            treeNode35});
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Node9");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
-            treeNode34,
-            treeNode36,
-            treeNode37});
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Node3");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Node5");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Node6");
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Node2", new System.Windows.Forms.TreeNode[] {
-            treeNode39,
-            treeNode40,
-            treeNode41,
-            treeNode42});
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
-            treeNode43});
-            WiseCorner wiseCorner13 = new WiseCorner();
-            WiseCorner wiseCorner14 = new WiseCorner();
-            WiseCorner wiseCorner15 = new WiseCorner();
-            WiseCorner wiseCorner16 = new WiseCorner();
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("3");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("4");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node7");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node10");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node8", new System.Windows.Forms.TreeNode[] {
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node9");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode3,
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node3");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node5");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node6");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node2", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode7,
+            treeNode8,
+            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
+            treeNode10});
+            WiseCorner wiseCorner4 = new WiseCorner();
+            WiseCorner wiseCorner5 = new WiseCorner();
+            WiseCorner wiseCorner6 = new WiseCorner();
+            WiseCorner wiseCorner7 = new WiseCorner();
+            this.wiseCheckBox3 = new WiseClockie.Forms.WiseCheckBox();
+            this.wiseCheckBox2 = new WiseClockie.Forms.WiseCheckBox();
+            this.wiseCheckBox1 = new WiseClockie.Forms.WiseCheckBox();
             this.wiseListBox1 = new WiseClockie.Forms.WiseListBox();
             this.wiseProgressBar3 = new WiseClockie.Forms.WiseProgressBar();
-            this.wiseCheckBox1 = new WiseClockie.Forms.WiseCheckBox();
             this.wiseListView1 = new WiseClockie.Forms.WiseListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,6 +80,59 @@
             this.wiseProgressBar1 = new WiseClockie.Forms.WiseProgressBar();
             this.wiseButton1 = new WiseClockie.Forms.WiseButton();
             this.SuspendLayout();
+            // 
+            // wiseCheckBox3
+            // 
+            this.wiseCheckBox3.AutoSize = true;
+            this.wiseCheckBox3.Checked = true;
+            this.wiseCheckBox3.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            wiseCorner1.All = 0;
+            wiseCorner1.BottomLeft = 0;
+            wiseCorner1.BottomRight = 0;
+            wiseCorner1.TopLeft = 0;
+            wiseCorner1.TopRight = 0;
+            this.wiseCheckBox3.CornerRadius = wiseCorner1;
+            this.wiseCheckBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wiseCheckBox3.Location = new System.Drawing.Point(220, 245);
+            this.wiseCheckBox3.Name = "wiseCheckBox3";
+            this.wiseCheckBox3.Size = new System.Drawing.Size(140, 24);
+            this.wiseCheckBox3.TabIndex = 16;
+            this.wiseCheckBox3.Text = "wiseCheckBox3";
+            this.wiseCheckBox3.UseVisualStyleBackColor = true;
+            // 
+            // wiseCheckBox2
+            // 
+            this.wiseCheckBox2.AutoSize = true;
+            this.wiseCheckBox2.Checked = true;
+            this.wiseCheckBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            wiseCorner2.All = 3;
+            wiseCorner2.BottomLeft = 3;
+            wiseCorner2.BottomRight = 3;
+            wiseCorner2.TopLeft = 3;
+            wiseCorner2.TopRight = 3;
+            this.wiseCheckBox2.CornerRadius = wiseCorner2;
+            this.wiseCheckBox2.Location = new System.Drawing.Point(220, 222);
+            this.wiseCheckBox2.Name = "wiseCheckBox2";
+            this.wiseCheckBox2.Size = new System.Drawing.Size(102, 17);
+            this.wiseCheckBox2.TabIndex = 15;
+            this.wiseCheckBox2.Text = "wiseCheckBox2";
+            this.wiseCheckBox2.UseVisualStyleBackColor = true;
+            // 
+            // wiseCheckBox1
+            // 
+            this.wiseCheckBox1.AutoSize = true;
+            wiseCorner3.All = 0;
+            wiseCorner3.BottomLeft = 0;
+            wiseCorner3.BottomRight = 0;
+            wiseCorner3.TopLeft = 0;
+            wiseCorner3.TopRight = 0;
+            this.wiseCheckBox1.CornerRadius = wiseCorner3;
+            this.wiseCheckBox1.Location = new System.Drawing.Point(220, 199);
+            this.wiseCheckBox1.Name = "wiseCheckBox1";
+            this.wiseCheckBox1.Size = new System.Drawing.Size(102, 17);
+            this.wiseCheckBox1.TabIndex = 14;
+            this.wiseCheckBox1.Text = "wiseCheckBox1";
+            this.wiseCheckBox1.UseVisualStyleBackColor = true;
             // 
             // wiseListBox1
             // 
@@ -103,38 +161,27 @@
             this.wiseProgressBar3.Value = 50;
             this.wiseProgressBar3.VerticalGradient = false;
             // 
-            // wiseCheckBox1
-            // 
-            this.wiseCheckBox1.AutoSize = true;
-            this.wiseCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wiseCheckBox1.Location = new System.Drawing.Point(220, 199);
-            this.wiseCheckBox1.Name = "wiseCheckBox1";
-            this.wiseCheckBox1.Size = new System.Drawing.Size(113, 19);
-            this.wiseCheckBox1.TabIndex = 9;
-            this.wiseCheckBox1.Text = "wiseCheckBox1";
-            this.wiseCheckBox1.UseVisualStyleBackColor = true;
-            // 
             // wiseListView1
             // 
             this.wiseListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
             this.wiseListView1.FullRowSelect = true;
-            listViewGroup7.Header = "Action";
-            listViewGroup7.Name = "listViewGroup1";
-            listViewGroup8.Header = "FPS";
-            listViewGroup8.Name = "listViewGroup2";
+            listViewGroup1.Header = "Action";
+            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup2.Header = "FPS";
+            listViewGroup2.Name = "listViewGroup2";
             this.wiseListView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup7,
-            listViewGroup8});
-            listViewItem14.Group = listViewGroup7;
-            listViewItem15.Group = listViewGroup7;
-            listViewItem16.Group = listViewGroup7;
+            listViewGroup1,
+            listViewGroup2});
+            listViewItem2.Group = listViewGroup1;
+            listViewItem3.Group = listViewGroup1;
+            listViewItem4.Group = listViewGroup1;
             this.wiseListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.wiseListView1.Location = new System.Drawing.Point(12, 103);
             this.wiseListView1.Name = "wiseListView1";
             this.wiseListView1.Size = new System.Drawing.Size(201, 238);
@@ -156,42 +203,42 @@
             this.wiseTreeView1.HotTracking = true;
             this.wiseTreeView1.Location = new System.Drawing.Point(220, 44);
             this.wiseTreeView1.Name = "wiseTreeView1";
-            treeNode34.Name = "Node7";
-            treeNode34.Text = "Node7";
-            treeNode35.Name = "Node10";
-            treeNode35.Text = "Node10";
-            treeNode36.Name = "Node8";
-            treeNode36.Text = "Node8";
-            treeNode37.Name = "Node9";
-            treeNode37.Text = "Node9";
-            treeNode38.Name = "Node0";
-            treeNode38.Text = "Node0";
-            treeNode39.Name = "Node3";
-            treeNode39.Text = "Node3";
-            treeNode40.Name = "Node4";
-            treeNode40.Text = "Node4";
-            treeNode41.Name = "Node5";
-            treeNode41.Text = "Node5";
-            treeNode42.Name = "Node6";
-            treeNode42.Text = "Node6";
-            treeNode43.Name = "Node2";
-            treeNode43.Text = "Node2";
-            treeNode44.Name = "Node1";
-            treeNode44.Text = "Node1";
+            treeNode1.Name = "Node7";
+            treeNode1.Text = "Node7";
+            treeNode2.Name = "Node10";
+            treeNode2.Text = "Node10";
+            treeNode3.Name = "Node8";
+            treeNode3.Text = "Node8";
+            treeNode4.Name = "Node9";
+            treeNode4.Text = "Node9";
+            treeNode5.Name = "Node0";
+            treeNode5.Text = "Node0";
+            treeNode6.Name = "Node3";
+            treeNode6.Text = "Node3";
+            treeNode7.Name = "Node4";
+            treeNode7.Text = "Node4";
+            treeNode8.Name = "Node5";
+            treeNode8.Text = "Node5";
+            treeNode9.Name = "Node6";
+            treeNode9.Text = "Node6";
+            treeNode10.Name = "Node2";
+            treeNode10.Text = "Node2";
+            treeNode11.Name = "Node1";
+            treeNode11.Text = "Node1";
             this.wiseTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode38,
-            treeNode44});
+            treeNode5,
+            treeNode11});
             this.wiseTreeView1.Size = new System.Drawing.Size(94, 149);
             this.wiseTreeView1.TabIndex = 6;
             // 
             // wiseButton4
             // 
-            wiseCorner13.All = -1;
-            wiseCorner13.BottomLeft = 0;
-            wiseCorner13.BottomRight = 15;
-            wiseCorner13.TopLeft = 0;
-            wiseCorner13.TopRight = 15;
-            this.wiseButton4.CornerRadius = wiseCorner13;
+            wiseCorner4.All = -1;
+            wiseCorner4.BottomLeft = 0;
+            wiseCorner4.BottomRight = 15;
+            wiseCorner4.TopLeft = 0;
+            wiseCorner4.TopRight = 15;
+            this.wiseButton4.CornerRadius = wiseCorner4;
             this.wiseButton4.Location = new System.Drawing.Point(43, 48);
             this.wiseButton4.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.wiseButton4.Name = "wiseButton4";
@@ -206,12 +253,12 @@
             // 
             // wiseButton3
             // 
-            wiseCorner14.All = -1;
-            wiseCorner14.BottomLeft = 15;
-            wiseCorner14.BottomRight = 0;
-            wiseCorner14.TopLeft = 15;
-            wiseCorner14.TopRight = 0;
-            this.wiseButton3.CornerRadius = wiseCorner14;
+            wiseCorner5.All = -1;
+            wiseCorner5.BottomLeft = 15;
+            wiseCorner5.BottomRight = 0;
+            wiseCorner5.TopLeft = 15;
+            wiseCorner5.TopRight = 0;
+            this.wiseButton3.CornerRadius = wiseCorner5;
             this.wiseButton3.Location = new System.Drawing.Point(12, 48);
             this.wiseButton3.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.wiseButton3.Name = "wiseButton3";
@@ -226,12 +273,12 @@
             // 
             // wiseButton2
             // 
-            wiseCorner15.All = 0;
-            wiseCorner15.BottomLeft = 0;
-            wiseCorner15.BottomRight = 0;
-            wiseCorner15.TopLeft = 0;
-            wiseCorner15.TopRight = 0;
-            this.wiseButton2.CornerRadius = wiseCorner15;
+            wiseCorner6.All = 0;
+            wiseCorner6.BottomLeft = 0;
+            wiseCorner6.BottomRight = 0;
+            wiseCorner6.TopLeft = 0;
+            wiseCorner6.TopRight = 0;
+            this.wiseButton2.CornerRadius = wiseCorner6;
             this.wiseButton2.Location = new System.Drawing.Point(139, 74);
             this.wiseButton2.Name = "wiseButton2";
             this.wiseButton2.Size = new System.Drawing.Size(75, 23);
@@ -263,12 +310,12 @@
             // 
             // wiseButton1
             // 
-            wiseCorner16.All = 0;
-            wiseCorner16.BottomLeft = 0;
-            wiseCorner16.BottomRight = 0;
-            wiseCorner16.TopLeft = 0;
-            wiseCorner16.TopRight = 0;
-            this.wiseButton1.CornerRadius = wiseCorner16;
+            wiseCorner7.All = 0;
+            wiseCorner7.BottomLeft = 0;
+            wiseCorner7.BottomRight = 0;
+            wiseCorner7.TopLeft = 0;
+            wiseCorner7.TopRight = 0;
+            this.wiseButton1.CornerRadius = wiseCorner7;
             this.wiseButton1.Location = new System.Drawing.Point(139, 45);
             this.wiseButton1.Name = "wiseButton1";
             this.wiseButton1.Size = new System.Drawing.Size(75, 23);
@@ -286,9 +333,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 352);
+            this.Controls.Add(this.wiseCheckBox3);
+            this.Controls.Add(this.wiseCheckBox2);
+            this.Controls.Add(this.wiseCheckBox1);
             this.Controls.Add(this.wiseListBox1);
             this.Controls.Add(this.wiseProgressBar3);
-            this.Controls.Add(this.wiseCheckBox1);
             this.Controls.Add(this.wiseListView1);
             this.Controls.Add(this.wiseTreeView1);
             this.Controls.Add(this.wiseButton4);
@@ -317,9 +366,11 @@
         private WiseClockie.Forms.WiseListView wiseListView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private WiseClockie.Forms.WiseCheckBox wiseCheckBox1;
         private WiseClockie.Forms.WiseProgressBar wiseProgressBar3;
         private WiseClockie.Forms.WiseListBox wiseListBox1;
+        private WiseClockie.Forms.WiseCheckBox wiseCheckBox1;
+        private WiseClockie.Forms.WiseCheckBox wiseCheckBox2;
+        private WiseClockie.Forms.WiseCheckBox wiseCheckBox3;
     }
 }
 
