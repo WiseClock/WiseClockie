@@ -182,7 +182,7 @@ namespace WiseClockie.Forms
         }
 
         [Description("Is the button drawn in gradient colors."), Category("WiseClockie"), DefaultValue(true)]
-        public bool IsGradient
+        public bool Gradient
         {
             get
             {

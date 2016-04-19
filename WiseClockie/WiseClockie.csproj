@@ -43,6 +43,9 @@
     </Compile>
     <Compile Include="Forms\WiseCorner.cs" />
     <Compile Include="Forms\WiseCornerConverter.cs" />
+    <Compile Include="Forms\WiseListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\WiseListView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -63,6 +66,8 @@
     <Compile Include="NativeMethod.cs" />
     <Compile Include="System\OpenDirectoryDialog.cs" />
     <Compile Include="System\WiseFileWriter.cs" />
+    <Compile Include="Utils\WiseList.cs" />
+    <Compile Include="Utils\WiseListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

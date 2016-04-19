@@ -19,6 +19,7 @@ namespace WiseClockie.Forms
         private Color _gradient2 = Color.DarkBlue;
         private int _borderSize = 1;
         private bool _isGradient = false;
+        private bool _isVerticalGradient = true;
         private bool _drawBorder = true;
         private bool _isAnimated = false;
 
@@ -67,7 +68,7 @@ namespace WiseClockie.Forms
         }
 
         [Description("The beggining color of the progress bar if using gradient."), DefaultValue(typeof(Color), "LightBlue"), Category("WiseClockie")]
-        public Color Gradient1
+        public Color GradientColor1
         {
             get
             {
@@ -80,7 +81,7 @@ namespace WiseClockie.Forms
         }
 
         [Description("The ending color of the progress bar if using gradient."), DefaultValue(typeof(Color), "DarkBlue"), Category("WiseClockie")]
-        public Color Gradient2
+        public Color GradientColor2
         {
             get
             {
@@ -115,6 +116,19 @@ namespace WiseClockie.Forms
             set
             {
                 _isGradient = value;
+            }
+        }
+
+        [Description("Set if the gradient is drawn vertically."), DefaultValue(true), Category("WiseClockie")]
+        public bool VerticalGradient
+        {
+            get
+            {
+                return _isVerticalGradient;
+            }
+            set
+            {
+                _isVerticalGradient = value;
             }
         }
 
@@ -175,6 +189,9 @@ namespace WiseClockie.Forms
             borderPen.Alignment = PenAlignment.Inset;
             Brush backBrush = new SolidBrush(this.BackColor);
             Brush solidBrush = new SolidBrush(this.SolidColor);
+            Brush gradientBrush = new LinearGradientBrush(e.ClipRectangle, GradientColor1, GradientColor2, LinearGradientMode.Vertical);
+            if (!VerticalGradient)
+                gradientBrush = new LinearGradientBrush(e.ClipRectangle, GradientColor1, GradientColor2, LinearGradientMode.Horizontal);
 
             // int offset = (this.BorderSize == 1) ? 1 : 0;
             Rectangle rect = new Rectangle(0, 0, this.Width, this.Height);
@@ -193,7 +210,10 @@ namespace WiseClockie.Forms
 
             // draw progress
             rectInner.Width = (int)(rectInner.Width * ((double)Value / Maximum));
-            e.Graphics.FillRectangle(solidBrush, rectInner);
+            if (Gradient)
+                e.Graphics.FillRectangle(gradientBrush, rectInner);
+            else
+                e.Graphics.FillRectangle(solidBrush, rectInner);
 
             using (Bitmap bmp = new Bitmap(this.Width, this.Height))
             {

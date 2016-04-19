@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using WiseClockie.System;
 using WiseClockie.Media;
+using WiseClockie.Utils;
 
 namespace WiseClockieTester
 {
@@ -30,6 +31,17 @@ namespace WiseClockieTester
         private void wiseButton2_Click(object sender, EventArgs e)
         {
             WiseSoundPlayer.Play(WiseMidiFile.Nyancat, true);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            WiseList<string> x = new WiseList<string>();
+            x.Add("a", 5);
+            x.Add("b", 0.1);
+            x.Add("c", 0.1);
+            x.Add("d", 0.1);
+            x.Add("e", 0.1);
+            Console.WriteLine(x.GetRandom());
         }
     }
 }
